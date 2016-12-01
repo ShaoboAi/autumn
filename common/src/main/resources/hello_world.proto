@@ -1,0 +1,15 @@
+package com.alix;
+
+message HelloWorldRequest {
+    required string requestId = 1;
+    required string method = 4;
+}
+
+message HelloWorldResponse {
+    required string responseId = 1;
+}
+
+
+service HelloWorldService {
+    rpc say (HelloWorldRequest) returns (HelloWorldResponse);
+}

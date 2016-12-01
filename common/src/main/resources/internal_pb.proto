@@ -1,0 +1,15 @@
+package com.pingnotes.proto;
+
+message InternalRequest {
+    required string requestId = 1;
+    required int64  uin = 2;
+    required string serviceName = 3;
+    required string methodName = 4;
+    optional string paramType = 5;
+    optional bytes  parameter = 6;
+}
+
+message InternalResponse {
+    required string responseId = 1;
+    optional bytes responseContent = 3;
+}

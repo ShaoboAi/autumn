@@ -1,0 +1,10 @@
+package ${packageName}.api;
+
+import ${packageName}.*;
+
+
+public interface ${serviceName} {
+#foreach($method in $methods)
+  public ${method.responseType} ${method.name}(${method.requestType} $clssUtility.buildParamName(${method.requestType}));
+#end
+}
