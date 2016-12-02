@@ -31,6 +31,7 @@
         <junit.version>4.12</junit.version>
         <prometheus.version>0.0.18</prometheus.version>
         <protobuf.java.version>2.6.1</protobuf.java.version>
+        <jcl.over.slf4j.version>1.7.21</jcl.over.slf4j.version>
     </properties>
 
     <dependencyManagement>
@@ -76,12 +77,6 @@
             </dependency>
 
             <dependency>
-                <groupId>commons-codec</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>1.10</version>
-            </dependency>
-
-            <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
@@ -90,6 +85,20 @@
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-java</artifactId>
                 <version>${protobuf.java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>99-empty</version>
+            </dependency>
+        <!-- Do not forget to declare a dependency on jcl-over-slf4j in the        -->
+        <!-- dependencies section. Note that the dependency on commons-logging     -->
+        <!-- will be imported transitively. You don't have to declare it yourself. -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${jcl.over.slf4j.version}</version>
             </dependency>
 
             <dependency>
